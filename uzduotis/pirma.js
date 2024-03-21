@@ -3,9 +3,11 @@
 //Failo pavyzdys:
 //1 2 7 3 4 6 -1 2 4 -3 -3 -5 1 5 6 7 5 9 2 3 6 7 8 6 3 6 7 5 6 7 1
 
-/*
+
 const fs = require("fs");
-const input = fs.readFileSync('temp.txt').toString().split(" ");
+const input = fs.readFileSync(process.argv[2]).toString().split(" ").map(Number);
+
+console.log(typeof input[0]);
 
 let minT = input[0];
 let minD = 1;
@@ -23,7 +25,7 @@ input.forEach((d, i) => {
 });
 console.log(`Min: ${minT}, ${minD}  Max: ${maxT}, ${maxD}`);
 
-*/
+/*
 const fs = require('fs');
 
 const temperatures = fs.readFileSync('temp.txt').toString().split(' ').map(Number);
@@ -50,3 +52,4 @@ console.log('Maximalios temperaturos diena:', maxDays.join(', '));
 console.log('Minimali temperatura:', minTemp);
 console.log('Minimalios temperaturos diena:', minDays.join(', '));
 
+*/
